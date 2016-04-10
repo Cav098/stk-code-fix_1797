@@ -78,6 +78,10 @@
                     </div>
                 </div>
             </div>
+
+            <icon-button id="items" width="64" height="64" icon="gui/gift.png"
+                    I18N="In the track info screen" text="Items" align="center"/>
+
             <div width="100%" height="fit" layout="horizontal-row" >
                 <label id="record-race-text" proportion="1" I18N="In the track info screen" text="Record the race for ghost replay" text_align="right"/>
                 <spacer width="40"/>
@@ -87,6 +91,7 @@
                     </div>
                 </div>
             </div>
+            
             <spacer width="1" height="1%"/>
         </box>
         <spacer width="1" height="1%"/>

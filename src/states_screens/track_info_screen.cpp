@@ -68,6 +68,7 @@ void TrackInfoScreen::loadedFromFile()
     m_lap_spinner     = getWidget<SpinnerWidget>("lap-spinner");
     m_ai_kart_spinner = getWidget<SpinnerWidget>("ai-spinner");
     m_option          = getWidget<CheckBoxWidget>("option");
+    m_items           = getWidget<IconButtonWidget>("items");
     m_record_race     = getWidget<CheckBoxWidget>("record");
     m_option->setState(false);
     m_record_race->setState(false);
@@ -81,7 +82,7 @@ void TrackInfoScreen::loadedFromFile()
     m_highscore_entries[0] = getWidget<LabelWidget>("highscore1");
     m_highscore_entries[1] = getWidget<LabelWidget>("highscore2");
     m_highscore_entries[2] = getWidget<LabelWidget>("highscore3");
-    
+
     GUIEngine::IconButtonWidget* screenshot = getWidget<IconButtonWidget>("screenshot");
     screenshot->setFocusable(false);
     screenshot->m_tab_stop = false;
@@ -225,6 +226,13 @@ void TrackInfoScreen::init()
     }
     else
         m_option->setState(false);
+
+
+    //Items settings
+    // -------------
+    const bool items_available = race_manager->getMinorMode() != RaceManager::MINOR_MODE_TIME_TRIAL;
+    m_items->setActive(items_available);
+
 
     // Record race or not
     // -------------

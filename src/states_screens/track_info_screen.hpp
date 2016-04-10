@@ -57,6 +57,9 @@ class TrackInfoScreen : public GUIEngine::Screen,
     /** Check box for reverse mode or random item in arena. */
     GUIEngine::CheckBoxWidget* m_option;
 
+    /** Button for items settings. */
+    GUIEngine::IconButtonWidget* m_items;
+
     /** Check box for record race. */
     GUIEngine::CheckBoxWidget* m_record_race;
 
