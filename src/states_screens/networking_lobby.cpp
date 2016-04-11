@@ -179,7 +179,7 @@ void NetworkingLobby::eventCallback(Widget* widget, const std::string& name,
 
     RibbonWidget* ribbon = dynamic_cast<RibbonWidget*>(widget);
     if (ribbon == NULL) return;
-    const std::string &selection = 
+    const std::string &selection =
                      ribbon->getSelectionIDString(PLAYER_ID_GAME_MASTER);
 
     if (selection == m_exit_widget->m_properties[PROP_ID])

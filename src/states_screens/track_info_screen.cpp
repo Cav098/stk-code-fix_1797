@@ -36,6 +36,7 @@
 #include "race/highscores.hpp"
 #include "race/highscore_manager.hpp"
 #include "race/race_manager.hpp"
+#include "states_screens/item_settings_screen.hpp"
 #include "states_screens/state_manager.hpp"
 #include "states_screens/tracks_screen.hpp"
 #include "tracks/track.hpp"
@@ -232,6 +233,7 @@ void TrackInfoScreen::init()
     // -------------
     const bool items_available = race_manager->getMinorMode() != RaceManager::MINOR_MODE_TIME_TRIAL;
     m_items->setActive(items_available);
+
 
 
     // Record race or not
@@ -449,6 +451,10 @@ void TrackInfoScreen::eventCallback(Widget* widget, const std::string& name,
         race_manager->setNumKarts( race_manager->getNumLocalPlayers() + num_ai );
         UserConfigParams::m_num_karts = race_manager->getNumLocalPlayers() + num_ai;
         updateHighScores();
+    }
+    else if (name == "items")
+    {
+        race_manager->setAISuperPower()
     }
 }   // eventCallback
 

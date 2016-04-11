@@ -50,7 +50,7 @@
 
         </box>
         <spacer width="1" height="1%"/>
-        <box width="100%" height="33%" padding="15" layout="vertical-row">
+        <box width="100%" height="40%" padding="20" layout="vertical-row">
             <div width="100%" height="fit" layout="horizontal-row" >
                 <label id="lap-text" proportion="1" I18N="In the track info screen" text="Number of laps" text_align="right"/>
                 <spacer width="40"/>
@@ -79,9 +79,6 @@
                 </div>
             </div>
 
-            <icon-button id="items" width="64" height="64" icon="gui/gift.png"
-                    I18N="In the track info screen" text="Items" align="center"/>
-
             <div width="100%" height="fit" layout="horizontal-row" >
                 <label id="record-race-text" proportion="1" I18N="In the track info screen" text="Record the race for ghost replay" text_align="right"/>
                 <spacer width="40"/>
@@ -91,11 +88,20 @@
                     </div>
                 </div>
             </div>
+
+
+           <buttonbar id="item-settings" height="35%" width="100%">
+               <icon-button id="items" width="64" height="64" icon="gui/gift.png"
+               I18N="In the track info screen" text="Item Settings" />
+	   </buttonbar>
+
             
-            <spacer width="1" height="1%"/>
+
+
+            <spacer width="1" height="10%"/>
         </box>
         <spacer width="1" height="1%"/>
-        <buttonbar id="buttons" height="15%" width="100%" align="center">
+        <buttonbar id="buttons" height="13%" width="100%" align="center">
             <icon-button id="start" width="64" height="64" icon="gui/green_check.png"
                     I18N="In the track info screen" text="Start Race"/>
 
