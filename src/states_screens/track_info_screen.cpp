@@ -452,7 +452,7 @@ void TrackInfoScreen::eventCallback(Widget* widget, const std::string& name,
     }
     else if (name == "items")
     {
-        race_manager->setAISuperPower()
+        StateManager::get()->pushScreen(ItemSettingsScreen)
     }
 }   // eventCallback
 

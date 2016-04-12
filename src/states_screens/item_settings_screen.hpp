@@ -54,7 +54,7 @@ class ItemSettingsScreen : public GUIEngine::Screen,
     GUIEngine::CheckBoxWidget* m_parachute;
     GUIEngine::CheckBoxWidget* m_anvil;
 
-    public:
+public:
 
     ItemSettingsScreen();
     virtual ~ItemSettingsScreen();
@@ -66,4 +66,4 @@ class ItemSettingsScreen : public GUIEngine::Screen,
 
     void setTrack(Track *track);
 
-}
+};
