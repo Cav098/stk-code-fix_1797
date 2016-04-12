@@ -22,6 +22,16 @@
 
 #include "guiengine/screen.hpp"
 
+namespace GUIEngine
+{
+    class CheckBoxWidget;
+    class IconButtonWidget;
+    class LabelWidget;
+    class SpinnerWidget;
+    class Widget;
+}
+class Track;
+
 /**
  * \brief Screen that allows the user to toggle items in a race.
  * \ingroup states_screens
@@ -30,5 +40,30 @@ class ItemSettingsScreen : public GUIEngine::Screen,
                            public GUIEngine::ScreenSingleton<ItemSettingsScreen?
 {
 
+    static const int NUM_ITEMS = 7
+
+    /** The checkboxes for the item toggles. */
+    GUIEngine::CheckBoxWidget* m_bubblegum;
+    GUIEngine::CheckBoxWidget* m_cake;
+    GUIEngine::CheckBoxWidget* m_bowling;
+    GUIEngine::CheckBoxWidget* m_zipper;
+    GUIEngine::CheckBoxWidget* m_plunger;
+    GUIEngine::CheckBoxWidget* m_switch;
+    GUIEngine::CheckBoxWidget* m_swatter;
+    GUIEngine::CheckBoxWidget* m_rubberball;
+    GUIEngine::CheckBoxWidget* m_parachute;
+    GUIEngine::CheckBoxWidget* m_anvil;
+
+    public:
+
+    ItemSettingsScreen();
+    virtual ~ItemSettingsScreen();
+
+    virtual void init();
+    virtual void loadedFromFile();
+    virtual void eventCallback(GUIEngine::Widget *,const std::string &name ,
+                               const int player_id);
+
+    void setTrack(Track *track);
 
 }

@@ -234,8 +234,6 @@ void TrackInfoScreen::init()
     const bool items_available = race_manager->getMinorMode() != RaceManager::MINOR_MODE_TIME_TRIAL;
     m_items->setActive(items_available);
 
-
-
     // Record race or not
     // -------------
     const bool record_available = race_manager->getMinorMode() == RaceManager::MINOR_MODE_TIME_TRIAL;
