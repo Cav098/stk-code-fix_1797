@@ -450,9 +450,9 @@ void TrackInfoScreen::eventCallback(Widget* widget, const std::string& name,
         UserConfigParams::m_num_karts = race_manager->getNumLocalPlayers() + num_ai;
         updateHighScores();
     }
-    else if (name == "items")
+    else if (name == "item-settings")
     {
-        StateManager::get()->pushScreen(ItemSettingsScreen)
+        ItemSettingsScreen::getInstance()->push();
     }
 }   // eventCallback
 

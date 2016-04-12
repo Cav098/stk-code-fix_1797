@@ -37,10 +37,10 @@ class Track;
  * \ingroup states_screens
  */
 class ItemSettingsScreen : public GUIEngine::Screen,
-                           public GUIEngine::ScreenSingleton<ItemSettingsScreen?
+                           public GUIEngine::ScreenSingleton<ItemSettingsScreen>
 {
 
-    static const int NUM_ITEMS = 7
+    static const int NUM_ITEMS = 7;
 
     /** The checkboxes for the item toggles. */
     GUIEngine::CheckBoxWidget* m_bubblegum;
@@ -64,6 +64,6 @@ public:
     virtual void eventCallback(GUIEngine::Widget *,const std::string &name ,
                                const int player_id);
 
-    void setTrack(Track *track);
-
 };
+
+#endif

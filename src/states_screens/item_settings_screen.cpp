@@ -62,19 +62,21 @@ ItemSettingsScreen::ItemSettingsScreen()
 {
 }    // ItemSettingsScreen
 
+ItemSettingsScreen::~ItemSettingsScreen()
+{
+} // ~ItemSettingsScreen
+
 // ----------------------------------------------------------------------------
 void ItemSettingsScreen::loadedFromFile()
 {
 }    // loadedFromfile
 
 // ----------------------------------------------------------------------------
-void ItemSettingsScreen::setTrack(Track *track)
-{
-    m_track = track;
-}    // setTrack
-
-// ----------------------------------------------------------------------------
 void ItemSettingsScreen::init()
 {
 }    // init
 
+// ----------------------------------------------------------------------------
+void ItemSettingsScreen::eventCallback(GUIEngine::Widget *,const std::string &name , const int player_id)
+{
+}    // eventCallback
