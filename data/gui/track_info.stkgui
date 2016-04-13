@@ -91,7 +91,7 @@
 
 
            <buttonbar id="item-settings" height="35%" width="100%">
-               <icon-button id="items" width="64" height="64" icon="gui/gift.png"
+               <icon-button id="items" width="64" height="64" icon="models/swap-icon.png"
                I18N="In the track info screen" text="Item Settings" />
 	   </buttonbar>
 

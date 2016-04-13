@@ -79,4 +79,8 @@ void ItemSettingsScreen::init()
 // ----------------------------------------------------------------------------
 void ItemSettingsScreen::eventCallback(GUIEngine::Widget *,const std::string &name , const int player_id)
 {
+    if (name == "back")
+    {
+        StateManager::get()->escapePressed();
+    }
 }    // eventCallback
